@@ -1,0 +1,174 @@
+@font-face {
+	/* Define custom font for the title */
+	font-family: "LinkinPark";
+	/* Sets the source of the font file and its format */
+	src: url("../fonts/linkinpark.ttf") format("truetype");
+	font-weight: lighter; /* Specifies the font weight */
+	font-style: normal; /* Specifies the font style */
+}
+
+@font-face {
+	/* Define custom font named "Higborn" used for verses */
+	font-family: "Higborn";
+	src: url("../fonts/Higborn.otf") format("opentype");
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face {
+	/* Define custom font named "RoadRage" used for chorus and post-chorus*/
+	/* https://www.w3schools.com/css/css3_fonts.asp */
+	font-family: "RoadRage";
+	src: url("../fonts/Roadrage-owgBd.otf") format("openType");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	/* Define custom font named "Funkrocker" used for the bridge sction*/
+	/* https://www.w3schools.com/css/css3_fonts.asp */
+	font-family: "Funkrocker";
+	src: url("../fonts/Funkrocker.otf") format("openType");
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face {
+	/* Define custom font named "StreetMaster" used for significant words in the bridge sction*/
+	/* https://www.w3schools.com/css/css3_fonts.asp */
+	font-family: "StreetMaster";
+	src: url("../fonts/StreetMaster.otf") format("openType");
+	font-weight: lighter;
+	font-style: normal;
+}
+
+html {
+	/* Sets the background image for the entire HTML document */
+	background-image: url("../media/bg.png");
+	background-size: cover; /* Ensures the background image covers the whole area */
+	background-position: center; /* Centers the background image */
+	background-repeat: no-repeat; /* Prevents the background image from repeating */
+}
+
+body {
+	/* Centers text and aligns content */
+	text-align: center;
+	align-content: center;
+	/* Adds a semi-transparent background color to the body */
+	background-color: rgba(205, 205, 205, 0.7); /* Light gray with 70% opacity */
+}
+
+h1 {
+	font-family: "LinkinPark", sans-serif; /* Uses the custom "LinkinPark" font */
+	color: white; /* Sets the text color to white */
+	font-size: 50px; /* Sets the font size */
+	-webkit-text-stroke: 2px black; /* Adds a 2px black stroke around the text */
+	text-shadow: 4px 4px black; /* Adds a black shadow effect to the text */
+	margin-top: 40px; /* Adds a margin to the top */
+}
+
+h2 {
+	font-family: "LinkinPark", sans-serif;
+	color: white;
+	font-size: 30px;
+	font-style: italic; /* Makes the text italic */
+	-webkit-text-stroke: 2px black;
+	text-shadow: 4px 4px black;
+	margin-bottom: -20px; /* Adds a negative margin to the bottom */
+}
+
+section {
+	/* Styles for all section elements */
+	margin-bottom: 20px; /* Adds a margin to the bottom */
+	font-size: 30px;
+}
+
+/* font, colour, and text shadow used for verse one and two, the pre chorus and main chorus, and the intro and outro */
+.verseOne,
+.preChorus,
+.verseTwo,
+.chorus,
+.introOutro {
+	font-family: Higborn; /* Uses the custom "Higborn" font */
+	color: white;
+	/* Adds a multi-layered black shadow effect to the text */
+	text-shadow: 0.1em 0.1em 0.1em black, -0.1em -0.1em 0.1em black,
+		0.1em 0.1em 0.1em black;
+}
+
+/* font, colour, sizing, and text shadow used for bridge */
+.bridge {
+	font-family: Funkrocker; /* Uses the custom "Funkrocker" font */
+	font-size: 200%; /* Sets the font size to twice the base size */
+	color: white;
+	text-shadow: 0.1em 0.1em 0.1em black, -0.1em -0.1em 0.1em black,
+		0.1em 0.1em 0.1em black;
+}
+
+/* font, colour, and text shadow used for chrous and post chorus */
+.chorus,
+.postChorus {
+	font-family: RoadRage; /* Uses the custom "RoadRage" font */
+	color: white; /* Sets the text color to white */
+	/* Adds a multi-layered black shadow effect to the text */
+	text-shadow: 0.1em 0.1em 0.1em black, -0.1em -0.1em 0.1em black,
+		0.1em 0.1em 0.1em black;
+}
+
+/* spacing for all sections paragraph texts */
+.verseOne p,
+.preChorus p,
+.verseTwo p,
+.chorus p,
+.bridge p,
+.postChorus p,
+.introOutro p {
+	margin-bottom: -25px;
+	line-height: 70px; /* Sets the height of the line */
+}
+
+/* properties for all sections title text */
+.verseOne .sectionTitle,
+.preChorus .sectionTitle,
+.verseTwo .sectionTitle,
+.chorus .sectionTitle,
+.bridge .sectionTitle,
+.postChorus .sectionTitle,
+.introOutro .sectionTitle {
+	font-family: "LinkinPark", sans-serif;
+	font-size: 20px;
+	margin-top: 80px;
+	color: black; /* Sets the text color to black */
+	/* Adds a multi-layered white shadow effect to the text */
+	text-shadow: 0.1em 0.1em 0.1em white, -0.1em -0.1em 0.1em white,
+		0.1em 0.1em 0.1em white;
+}
+
+/* properties for significant text in verse one, pre chorus and verse two */
+.verseOne span,
+.preChorus span,
+.verseTwo span {
+	font-size: 140%; /* Sets the font size to 140% of the base size */
+	color: transparent; /* Makes the text fill transparent */
+	-webkit-text-stroke: 1px; /* Adds a 1px stroke around the text */
+	-webkit-text-stroke-color: lightgray; /* Sets the stroke color to light gray */
+}
+
+/* properties for significant text in bridge */
+.bridge span {
+	font-family: StreetMaster; /* Uses the custom "StreetMaster" font */
+	font-size: 130%; /* Sets the font size to 130% of the base size */
+	color: black;
+	/* Adds a multi-layered shadow effect to the text with shades of gray */
+	text-shadow: 0.1em 0.1em 0.1em white, -0.1em -0.1em 0.1em grey,
+		0.1em 0.1em 0.1em darkgrey;
+}
+
+/* properties for significant text in chorus and post chorus */
+.chorus span,
+.postChorus span {
+	font-size: 180%; /* Sets the font size to 180% of the base size */
+	color: red; /* Sets the text fill color to red */
+	-webkit-text-stroke: 1px; /* Adds a 1px stroke around the text */
+	-webkit-text-stroke-color: black; /* Sets the stroke color to black */
+}
